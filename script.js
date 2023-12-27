@@ -22,7 +22,9 @@ function evaluateKey(key) {
   } else if (key === "Escape") {
     clearDisplay();
   } else {
-    appendToDisplay(key);
+    if (Number.isInteger(Number(key))) {
+        appendToDisplay(key);
+      }
   }
 }
 
